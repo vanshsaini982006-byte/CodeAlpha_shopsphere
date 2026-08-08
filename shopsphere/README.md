@@ -3,6 +3,9 @@
 **Developer:** Vansh Saini  
 **Links:** [Portfolio]https://vanshsaini982006-byte.github.io/Vansh-portfolio/ | [LinkedIn]https://www.linkedin.com/in/vansh-saini-029909380 | [GitHub]https://github.com/vanshsaini982006-byte
 
+🌐 **Live Demo:** [https://vansh-shopsphere.netlify.app](https://vansh-shopsphere.netlify.app)  
+⚙️ **Backend API:** [https://shopsphere-backend-j75c.onrender.com](https://shopsphere-backend-j75c.onrender.com)
+
 A production-ready e-commerce web application built with a vanilla HTML/CSS/JS
 frontend and a Node.js/Express/MongoDB backend. Includes customer-facing
 shopping (catalog, cart, wishlist, checkout with Razorpay, order tracking)
