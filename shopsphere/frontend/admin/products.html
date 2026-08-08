@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manage Products — ShopSphere Admin</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<div id="adminTopbarRoot"></div>
+<div class="admin-layout">
+  <div id="adminSidebarRoot"></div>
+  <div class="admin-content">
+    <div class="admin-toolbar">
+      <h1 style="font-size:1.6rem;">Products</h1>
+      <a href="product-form.html" class="btn btn-primary"><i class="fas fa-plus"></i> Add Product</a>
+    </div>
+    <div class="card" style="margin-bottom:16px;">
+      <input type="text" class="form-control" id="productSearchInput" placeholder="Search products by name..." />
+    </div>
+    <div class="card" style="overflow-x:auto;">
+      <table class="admin-table">
+        <thead><tr><th>Product</th><th>Category</th><th>Price</th><th>Stock</th><th>Rating</th><th>Actions</th></tr></thead>
+        <tbody id="productsTableBody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="adminProductsPagination"></div>
+  </div>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/admin-common.js"></script>
+<script src="../js/admin-products.js"></script>
+</body>
+</html>

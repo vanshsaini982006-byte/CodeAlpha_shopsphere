@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Manage Orders — ShopSphere Admin</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<div id="adminTopbarRoot"></div>
+<div class="admin-layout">
+  <div id="adminSidebarRoot"></div>
+  <div class="admin-content">
+    <div class="admin-toolbar">
+      <h1 style="font-size:1.6rem;">Orders</h1>
+      <select id="statusFilterSelect" style="padding:10px 14px;border-radius:8px;border:1.5px solid var(--border-color);background:var(--color-card);color:var(--text-primary);">
+        <option value="">All Statuses</option>
+        <option value="placed">Placed</option>
+        <option value="processing">Processing</option>
+        <option value="shipped">Shipped</option>
+        <option value="delivered">Delivered</option>
+        <option value="cancelled">Cancelled</option>
+      </select>
+    </div>
+    <div class="card" style="overflow-x:auto;">
+      <table class="admin-table">
+        <thead><tr><th>Order #</th><th>Customer</th><th>Date</th><th>Total</th><th>Payment</th><th>Status</th><th>Actions</th></tr></thead>
+        <tbody id="ordersTableBody"></tbody>
+      </table>
+    </div>
+    <div class="pagination" id="adminOrdersPagination"></div>
+  </div>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/admin-common.js"></script>
+<script src="../js/admin-orders.js"></script>
+</body>
+</html>

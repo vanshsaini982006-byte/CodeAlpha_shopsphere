@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title id="formTitle">Add Product — ShopSphere Admin</title>
+<link rel="stylesheet" href="../css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<div id="adminTopbarRoot"></div>
+<div class="admin-layout">
+  <div id="adminSidebarRoot"></div>
+  <div class="admin-content" style="max-width:800px;">
+    <div class="flex items-center gap-2 mb-3">
+      <a href="products.html" class="btn-icon"><i class="fas fa-arrow-left"></i></a>
+      <h1 style="font-size:1.6rem;" id="pageHeading">Add New Product</h1>
+    </div>
+
+    <form id="productForm" class="card">
+      <div class="form-row">
+        <div class="form-group"><label>Product Name *</label><input class="form-control" id="fName" required /></div>
+        <div class="form-group"><label>Brand *</label><input class="form-control" id="fBrand" required /></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Category *</label>
+          <select class="form-control" id="fCategory" required>
+            <option value="Electronics">Electronics</option>
+            <option value="Fashion">Fashion</option>
+            <option value="Home & Kitchen">Home & Kitchen</option>
+            <option value="Sports & Fitness">Sports & Fitness</option>
+            <option value="Books">Books</option>
+            <option value="Furniture">Furniture</option>
+          </select>
+        </div>
+        <div class="form-group"><label>SKU</label><input class="form-control" id="fSku" placeholder="Optional, auto-generated if blank" /></div>
+      </div>
+      <div class="form-group"><label>Description *</label><textarea class="form-control" id="fDescription" rows="4" required></textarea></div>
+      <div class="form-row">
+        <div class="form-group"><label>Price (₹) *</label><input type="number" class="form-control" id="fPrice" min="0" step="0.01" required /></div>
+        <div class="form-group"><label>Discount (%)</label><input type="number" class="form-control" id="fDiscount" min="0" max="90" value="0" /></div>
+      </div>
+      <div class="form-group"><label>Stock Quantity *</label><input type="number" class="form-control" id="fStock" min="0" required /></div>
+      <div class="form-group">
+        <label>Image URLs * (one per line)</label>
+        <textarea class="form-control" id="fImages" rows="3" placeholder="https://example.com/image1.jpg&#10;https://example.com/image2.jpg" required></textarea>
+      </div>
+      <div class="form-group">
+        <label>Features (one per line)</label>
+        <textarea class="form-control" id="fFeatures" rows="3" placeholder="Bluetooth 5.3&#10;30-hour battery"></textarea>
+      </div>
+      <div class="form-group">
+        <label>Specifications (key: value, one per line)</label>
+        <textarea class="form-control" id="fSpecs" rows="3" placeholder="Weight: 250g&#10;Warranty: 1 Year"></textarea>
+      </div>
+      <div class="flex gap-2 mb-2">
+        <label class="filter-option"><input type="checkbox" id="fFeatured" /> Featured</label>
+        <label class="filter-option"><input type="checkbox" id="fNewArrival" /> New Arrival</label>
+        <label class="filter-option"><input type="checkbox" id="fBestSeller" /> Best Seller</label>
+      </div>
+      <button type="submit" class="btn btn-primary" id="submitProductBtn">Save Product</button>
+    </form>
+  </div>
+</div>
+
+<script src="../js/config.js"></script>
+<script src="../js/api.js"></script>
+<script src="../js/auth.js"></script>
+<script src="../js/ui.js"></script>
+<script src="../js/admin-common.js"></script>
+<script src="../js/admin-product-form.js"></script>
+</body>
+</html>

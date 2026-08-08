@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shop All Products — ShopSphere</title>
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<div id="navbarRoot"></div>
+
+<div class="container">
+  <nav class="breadcrumb"><a href="index.html">Home</a> <i class="fas fa-chevron-right" style="font-size:10px"></i> <span id="breadcrumbCurrent">All Products</span></nav>
+</div>
+
+<div class="container section" style="padding-top:0;">
+  <div class="shop-layout">
+    <!-- Filters -->
+    <aside class="filters-panel card" id="filtersPanel">
+      <div class="flex justify-between items-center mb-2">
+        <h3 style="font-size:1.1rem;">Filters</h3>
+        <button class="btn-ghost btn-sm" id="clearFiltersBtn">Clear all</button>
+      </div>
+
+      <div class="filter-group">
+        <h4>Category</h4>
+        <div id="categoryFilters"></div>
+      </div>
+
+      <div class="filter-group">
+        <h4>Brand</h4>
+        <div id="brandFilters"></div>
+      </div>
+
+      <div class="filter-group">
+        <h4>Price Range</h4>
+        <div class="price-range-inputs">
+          <input type="number" id="minPriceInput" placeholder="Min" />
+          <span>–</span>
+          <input type="number" id="maxPriceInput" placeholder="Max" />
+        </div>
+        <button class="btn btn-outline btn-sm btn-block mt-1" id="applyPriceBtn">Apply</button>
+      </div>
+
+      <div class="filter-group">
+        <h4>Rating</h4>
+        <div id="ratingFilters">
+          <label class="filter-option"><input type="radio" name="rating" value="4" /> 4★ & above</label>
+          <label class="filter-option"><input type="radio" name="rating" value="3" /> 3★ & above</label>
+          <label class="filter-option"><input type="radio" name="rating" value="2" /> 2★ & above</label>
+        </div>
+      </div>
+
+      <div class="filter-group" style="border-bottom:none;">
+        <label class="filter-option"><input type="checkbox" id="inStockFilter" /> In stock only</label>
+      </div>
+    </aside>
+
+    <!-- Results -->
+    <div>
+      <div class="toolbar">
+        <span id="resultsCount" style="color:var(--text-secondary);font-size:0.9rem;">Loading...</span>
+        <div class="flex items-center gap-2">
+          <button class="btn btn-outline btn-sm" id="mobileFilterBtn" style="display:none;"><i class="fas fa-sliders"></i> Filters</button>
+          <select id="sortSelect">
+            <option value="newest">Newest</option>
+            <option value="price_asc">Price: Low to High</option>
+            <option value="price_desc">Price: High to Low</option>
+            <option value="popularity">Popularity</option>
+            <option value="rating">Best Rating</option>
+          </select>
+        </div>
+      </div>
+      <div class="active-filters" id="activeFiltersRow"></div>
+      <div class="product-grid" id="productsGrid"></div>
+      <div class="pagination" id="paginationRow"></div>
+    </div>
+  </div>
+</div>
+
+<div id="footerRoot"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/product-card.js"></script>
+<script src="js/products.js"></script>
+</body>
+</html>

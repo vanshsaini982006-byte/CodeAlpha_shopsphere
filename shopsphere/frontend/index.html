@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ShopSphere — Shop Electronics, Fashion, Home & More Online</title>
+<meta name="description" content="ShopSphere is your one-stop online store for electronics, fashion, home essentials, sports gear and books at unbeatable prices, delivered across India." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+</head>
+<body>
+<div id="navbarRoot"></div>
+
+<!-- Hero -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="hero-eyebrow"><i class="fas fa-bolt"></i> Big Billion Deals — Live Now</span>
+      <h1>Everything you need, delivered to your doorstep.</h1>
+      <p>Shop the latest electronics, fashion, home essentials and more — with fast delivery and easy returns across India.</p>
+      <div class="hero-actions">
+        <a href="products.html" class="btn btn-accent">Shop Now <i class="fas fa-arrow-right"></i></a>
+        <a href="products.html?sort=newest" class="btn btn-outline" style="border-color:rgba(255,255,255,0.3);color:#fff;">New Arrivals</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="https://images.unsplash.com/photo-1607082349566-187342175e2f?w=700" alt="Person shopping online with packages" style="border-radius:18px;" />
+      <div class="float-card" style="top:10%; left:-8%;"><i class="fas fa-truck-fast" style="color:var(--color-primary)"></i> Free delivery over ₹999</div>
+      <div class="float-card" style="bottom:8%; right:-6%;"><i class="fas fa-shield-halved" style="color:var(--color-success)"></i> 100% Secure Checkout</div>
+    </div>
+  </div>
+</section>
+
+<!-- Categories -->
+<section class="section container">
+  <div class="section-header">
+    <div><h2>Shop by Category</h2><p>Find exactly what you're looking for</p></div>
+  </div>
+  <div class="category-grid" id="categoryGrid">
+    <a href="products.html?category=Electronics" class="category-card"><div class="icon-circle"><i class="fas fa-laptop"></i></div><span>Electronics</span></a>
+    <a href="products.html?category=Fashion" class="category-card"><div class="icon-circle"><i class="fas fa-shirt"></i></div><span>Fashion</span></a>
+    <a href="products.html?category=Home%20%26%20Kitchen" class="category-card"><div class="icon-circle"><i class="fas fa-kitchen-set"></i></div><span>Home & Kitchen</span></a>
+    <a href="products.html?category=Sports%20%26%20Fitness" class="category-card"><div class="icon-circle"><i class="fas fa-dumbbell"></i></div><span>Sports & Fitness</span></a>
+    <a href="products.html?category=Books" class="category-card"><div class="icon-circle"><i class="fas fa-book"></i></div><span>Books</span></a>
+    <a href="products.html?category=Furniture" class="category-card"><div class="icon-circle"><i class="fas fa-chair"></i></div><span>Furniture</span></a>
+  </div>
+</section>
+
+<!-- Featured Products -->
+<section class="section container">
+  <div class="section-header">
+    <div><h2>Featured Products</h2><p>Handpicked picks just for you</p></div>
+    <a href="products.html" class="section-link">View all <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="product-grid" id="featuredGrid"></div>
+</section>
+
+<!-- Promo Banner -->
+<section class="container">
+  <div class="promo-banner">
+    <div>
+      <h3>Up to 30% off Electronics</h3>
+      <p>Limited-time deals on headphones, smartwatches, chargers and more.</p>
+    </div>
+    <a href="products.html?category=Electronics" class="btn btn-secondary">Shop the Sale</a>
+  </div>
+</section>
+
+<!-- Best Sellers -->
+<section class="section container">
+  <div class="section-header">
+    <div><h2>Best Sellers</h2><p>Loved by thousands of customers</p></div>
+    <a href="products.html?sort=popularity" class="section-link">View all <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="product-grid" id="bestSellerGrid"></div>
+</section>
+
+<!-- New Arrivals -->
+<section class="section container">
+  <div class="section-header">
+    <div><h2>New Arrivals</h2><p>Fresh drops added this week</p></div>
+    <a href="products.html?sort=newest" class="section-link">View all <i class="fas fa-arrow-right"></i></a>
+  </div>
+  <div class="product-grid" id="newArrivalsGrid"></div>
+</section>
+
+<div id="footerRoot"></div>
+
+<script src="js/config.js"></script>
+<script src="js/api.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/product-card.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>
