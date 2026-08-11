@@ -251,7 +251,7 @@ function renderFooter() {
 </a>
 
 <!-- Instagram -->
-<a href="https://www.instagram.com/your_username" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+<a href="vanshsaini4711" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
   <i class="fab fa-instagram"></i>
 </a>
 
